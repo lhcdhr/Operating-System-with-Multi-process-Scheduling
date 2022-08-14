@@ -1,0 +1,23 @@
+COMP310 A2
+Haochen Liu
+260917834
+
+The implementation used the starter code (solution to A1).
+
+In my implementation, when exec is given only 1 file of script to execute, then exec 
+will call run to execute this script. Because for whatever scheduling policy given,
+the output will be the same.
+
+I used linedklist of pcb to perform the task for readyQueue, but during the setting up
+of the readyQueue, arrays of pcb are also used to help generate the readyQueue, but 
+the execution of scripts is done by readyQueue itself.
+
+The code to be exec/run will be separated into pages and saved in directory called
+backingstore, which will be created during the runtime, and will be removed when 
+mysh exits without error.
+
+The implementation of demand paging and LRU is pased on the index of stored page in 
+memory. Each pcb keeps track of its total page, total lines of code, current page,
+current index in frame. There is a pagetable for each PCB to know where the 
+designated page is stored in memory or not(-1 means not yet, non-negative number
+indicates where the index of this page starts in the memory).
