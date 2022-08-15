@@ -8,6 +8,12 @@ A simple operating system implemented with C.
 - Supports basic command, including `help` `quit` `print` `set` `echo` `run` `exec` `my_ls`, and the commands are case sensitive.
 
 ## Command
+### `help`
+- `help`
+- Display all the commands and how to use them.
+### `quit`
+- `quit`
+- Terminate the OS Shell, and delete the backing store directory and all its contents.
 ### `set`
 - `set VAR STRING`
 - If `VAR` already exists, then overwrite the previously assigned one with `STRING`.
