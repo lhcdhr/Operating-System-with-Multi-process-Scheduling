@@ -27,7 +27,15 @@ A simple operating system implemented with C.
 - If error occurs when running, the error will be displayed and the script continue running.
 - The code of `SCRIPT` is loaded in to the OS Shell memory line by line.
 - A PCB keeps track of the PID, the location in memory where the script is stored, and the current inscruction to execute.
-- 
+- The program is added to the ready queue.
+- When `SCRIPT` terminates, the stored code is cleaned from the OS Shell memory.
+### `exec`
+- `exec P1 P2 P3 POLICY`
+- This command can execute up to 3 programs concurrently following the given scheduling policy `POLICY`.
+- The scheduling policies include `FCFS`, `SJF`, `RR`, and `AGING` (SJF with aging technique).
+- The code of each process is loaded into the OS Shell memory, and PCBs are created just like in `run` command.
+- PCBs are added to the ready queue, and the order and updating of the queue is determined by the scheduling policies.
+- The program that finished executing will be removed from the queue, and the stored code in the memory will be cleaned.
 ### `my_ls`
 - `my_ls`
 - List all files in the current directory in alphabetical order.
