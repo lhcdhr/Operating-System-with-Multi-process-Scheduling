@@ -5,7 +5,8 @@ A simple operating system implemented with C.
 - To compile, use command `make mysh`. 
 - To run the OS in interactive mode, use `./mysh`. 
 - The OS also supports batch mode that takes a file as input, use `./mysh < input.txt`.
-- Supports basic command, including `help` `quit` `print` `set` `echo` `run` `exec` `my_ls`, and the commands are case sensitive.
+- Supports basic commands, including `help` `quit` `print` `set` `echo` `run` `exec` `my_ls`, and the commands are case sensitive.
+- Scripts can be executed concurrently following different scheduling policies, including First Come First Serve (FCFS), Shortest Job First (SJF), Round Robin (RR), and SJF with job Aging.
 
 ## Command
 ### `help`
