@@ -1,5 +1,5 @@
 # Operating System with Multi-process Scheduling
- 
+[Here is another version of the OS implemented with demand paging and LRU](https://github.com/lhcdhr/Operating-System-with-Paging)
 ## Description
 A simple operating system implemented with C. 
 - To compile, use command `make mysh`. 
